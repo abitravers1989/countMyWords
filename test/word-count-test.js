@@ -5,7 +5,7 @@ const WordCounter = require('../app/wordCounter').WordCounter;
 describe('Word Counter', () => {
   var wordCounter;
 
-  beforeEach( () => {
+  beforeEach(() => {
     wordCounter = new WordCounter("Test text");
   })
 

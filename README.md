@@ -37,6 +37,8 @@ I want the output of all of WordCount's outstanding functionality, to be more vi
 
 A text file/ text is provided as an argument when WordCounter is initialised.
 
+CHECKS That the input is a string / converts it to a string
+
 It removes all capitalisation / punctuation
 
 

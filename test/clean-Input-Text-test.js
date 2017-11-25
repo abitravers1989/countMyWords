@@ -1,9 +1,6 @@
 const expect  = require('chai').expect;
-const assert = require('chai').assert;
 const sinon  = require('sinon');
 const CleanInputText = require('../app/cleanInputText').CleanInputText;
-
-
 
 describe('CleanInputText', () => {
   var cleanInputText;
@@ -66,7 +63,6 @@ describe('CleanInputText', () => {
   });
 
 
-
   describe('RemoveCapitalisation',() => {
 
     it("It converts capital letters to downcase", () => {
@@ -89,29 +85,5 @@ describe('CleanInputText', () => {
     });
 
   });
-
-  //
-  // describe('splitTextIntoWords',() => {
-  //
-  //   it("Splits the text into individual words and puts them into key value pairs with their word count", () => {
-  //     const testInputText = "Test TeXT LonGer Edition!!!! Test TeXT";
-  //     const expectedOutput = ["test", "text", "longer", "edition"];
-  //     wordCounter.cleanTextFunctions(testInputText)
-  //     wordCounter.splitTextIntoWords();
-  //     expect(wordCounter.wordsArray).to.equal(expectedOutput)
-  //   });
-  // });
-  //
-  //
-  // describe('countWords',() => {
-  //
-  //   it("Splits the text into individual words and puts them into key value pairs with their word count", () => {
-  //     const testInputText = "Test TeXT LonGer Edition!!!! Test TeXT";
-  //     const expectedOutput = {"test": 2, "text": 2, "longer": 1, "edition": 1 };
-  //     wordCounter.cleanTextFunctions(testInputText)
-  //     wordCounter.splitTextIntoWords();
-  //     expect(wordCounter.wordsArray).to.equal(expectedOutput)
-  //   });
-  // });
 
 });

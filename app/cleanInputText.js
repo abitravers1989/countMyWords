@@ -27,8 +27,3 @@ CleanInputText.prototype.cleanTextFunctions = function (providedText) {
 }
 
 module.exports.CleanInputText = CleanInputText;
-
-
-cleanInputText = new CleanInputText();
-cleanInputText.checkInputValidator("hh")
-cleanInputText.initialText

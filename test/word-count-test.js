@@ -13,9 +13,6 @@ describe('Word Counter', () => {
   });
 
 
-
-
-
   describe('Initialize',() => {
 
     it("When a new instance is initialised the initalText property is set to false", () => {
@@ -23,8 +20,6 @@ describe('Word Counter', () => {
     });
 
   });
-
-
 
 
   describe('CheckInputValidator',() => {
@@ -56,7 +51,7 @@ describe('Word Counter', () => {
       const testInputText = "Test text!!! I. but---";
       const expectedOutput = "Test text I but";
       wordCounter.checkInputValidator(testInputText);
-      wordCounter.RemovePunctuation();
+      wordCounter.removePunctuation();
       expect(wordCounter.initialText).to.equal(expectedOutput)
     });
 
@@ -64,9 +59,24 @@ describe('Word Counter', () => {
       const testInputText = "Contents. I.    The beginning of things. II.   Peter's coal-mine.III.  The old gentlem XIII. The hound's grandfatherXIV.  The End.Chapter I. The beginning of things."
       const expectedOutput = "Contents I    The beginning of things II   Peter's coalmineIII  The old gentlem XIII The hound's grandfatherXIV  The EndChapter I The beginning of things"
       wordCounter.checkInputValidator(testInputText);
-      wordCounter.RemovePunctuation();
+      wordCounter.removePunctuation();
       expect(wordCounter.initialText).to.equal(expectedOutput)
     });
+
+  });
+
+
+
+  describe('RemoveCapitalisation',() => {
+
+    it("It converts capital letters to downcase", () => {
+      const testInputText = "Test TeXT";
+      const expectedOutput = "test text";
+      wordCounter.checkInputValidator(testInputText);
+      wordCounter.removeCapitalisation();
+      expect(wordCounter.initialText).to.equal(expectedOutput)
+    });
+
 
   });
 

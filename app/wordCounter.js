@@ -12,8 +12,12 @@ WordCounter.prototype.checkInputValidator= function (providedText){
   };
 }
 
-WordCounter.prototype.RemovePunctuation = function() {
+WordCounter.prototype.removePunctuation = function() {
   this.initialText = this.initialText.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+}
+
+WordCounter.prototype.removeCapitalisation = function() {
+  this.initialText = this.initialText.toLowerCase();
 }
 
 module.exports.WordCounter = WordCounter;

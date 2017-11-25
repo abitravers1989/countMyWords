@@ -24,7 +24,7 @@ describe('Word Counter', () => {
     })
 
     it("It removes all punctuation", () => {
-      wordCounter.RemovePunctuation
+      wordCounter.RemovePunctuation();
       expect(wordCounter.initialText).to.equal("Test text I but")
     });
 

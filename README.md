@@ -33,6 +33,19 @@ I want the output of all of WordCount's outstanding functionality, to be more vi
 `````
 
 
+## The Information Story - How I plan / design the programme flow
+
+A text file/ text is provided as an argument when WordCounter is initialised.
+
+Any non-words / strange characters are removed.
+
+The text is split at empty spaces or lines. (Into individual words.)
+
+From each word any punctuation or capitalisation is removed.
+
+
+
+
 ## My approach
 
 Designed an MVP:

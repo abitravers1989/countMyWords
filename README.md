@@ -51,7 +51,7 @@ It formats this and displays it in a html file which is rendered in the browser.
 
 ## Where my thinking came from
 
-I designed the MVP as I did because I had recently done something in the command line. I wamted to get the simplistest working products
+I designed the MVP as I did because I had recently done something in the command line. I wanted to get the simplistest working products
 
 
 

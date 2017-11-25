@@ -7,6 +7,7 @@ WordCounter.prototype.checkInputValidator= function (providedText){
     this.initialText = providedText
   }
   else {
+    this.initialText = false
     console.log("I am sorry but I cannot count the words of something which isn't text Please enter text");
   };
 }
@@ -20,3 +21,4 @@ module.exports.WordCounter = WordCounter;
 
 wordCounter = new WordCounter();
 wordCounter.checkInputValidator("hh")
+wordCounter.initialText

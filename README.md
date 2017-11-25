@@ -75,6 +75,17 @@ It formats this and displays it in a html file which is rendered in the browser.
 I designed the MVP as I did because I had recently done something in the command line. I wanted to get the simplistest working products
 
 
+### Resources
+
+testing:
+
+https://github.com/stephengeller/prime-numbers-tech-test/tree/master/src
+
+https://www.sitepoint.com/unit-test-javascript-mocha-chai/
+
+http://chaijs.com/guide/styles/#expect
+
+
 
 Submission checklist
 

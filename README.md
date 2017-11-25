@@ -37,6 +37,12 @@ I want the output of all of WordCount's outstanding functionality, to be more vi
 
 A text file/ text is provided as an argument when WordCounter is initialised.
 
+It removes all capitalisation / punctuation
+
+
+
+
+
 Any non-words / strange characters are removed.
 
 The text is split at empty spaces or lines. (Into individual words.)

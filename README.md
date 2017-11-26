@@ -70,13 +70,20 @@ Next feature:
 It formats this and displays it in a html file which is rendered in the browser.
 
 
+### Level of abstraction chosen and why split the way it was
+
+### Testing
+
+Why did i chose mainly expect/ assert and why chai ..
+
+
 ## Controller / Opening the file.
 
 First I started by doing this asynchronously. This meant that the file opened and loaded before the wordCounter App functions could be ran on it's content. It therefore did not work.
 
 I then decided to do this syncronously. While the node FS modules are something I have had experience with in my final project, using them syncronously and potentially using setTimeouts is something I have had less experience with.
 
-This was my first attempt. This obviously didn't work because the variable fileContents could not be accessed outside of the function it is set in. 
+This was my first attempt. This obviously didn't work because the variable fileContents could not be accessed outside of the function it is set in.
 
 
 ## Where my thinking came from

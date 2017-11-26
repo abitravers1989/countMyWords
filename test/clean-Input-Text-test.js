@@ -10,16 +10,16 @@ describe('CleanInputText', () => {
   });
 
 
-  describe('Initialize',() => {
+  describe('initialize',() => {
 
-    it("When a new instance is initialised the initalText property is set to false", () => {
+    it("When a new instance is created the initalText property is set to false", () => {
       expect(cleanInputText.initialText).to.equal(false);
     });
 
   });
 
 
-  describe('CheckInputValidator',() => {
+  describe('checkInputValidator',() => {
 
     it("Sets initalText to the text supplied to it, if this is indeed text and not something else such as a picture or number.", () => {
       const testInputText = "Test text";
@@ -42,7 +42,7 @@ describe('CleanInputText', () => {
 
 
 
-  describe('RemovePunctuation',() => {
+  describe('removePunctuation',() => {
 
     it("It removes all punctuation", () => {
       const testInputText = "Test text!!! I. but---";
@@ -63,7 +63,7 @@ describe('CleanInputText', () => {
   });
 
 
-  describe('RemoveCapitalisation',() => {
+  describe('removeCapitalisation',() => {
 
     it("It converts capital letters to downcase", () => {
       const testInputText = "Test TeXT";

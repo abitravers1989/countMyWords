@@ -5,10 +5,18 @@ function SplitAndCountWords() {
 SplitAndCountWords.prototype.splitIntoWords= function (providedText){
   this.wordsArray = providedText.split(" ")
 }
-//
-// SplitAndCountWords.prototype.countOccurrenceOfWords = function() {
-//
-// }
+
+SplitAndCountWords.prototype.countOccurrenceOfWords = function() {
+   this.wordsArray = this.wordsArray.reduce(function(allWords, currentWord){
+     if (currentWord in allWords) {
+       allWords[currentWord]++;
+     }
+     else {
+        allWords[currentWord]=1;
+     }
+     return allWords;
+   }, {});
+ };
 //
 // SplitAndCountWords.prototype._isPrime = function() {
 //

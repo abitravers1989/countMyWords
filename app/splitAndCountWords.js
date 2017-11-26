@@ -1,13 +1,13 @@
 function SplitAndCountWords() {
-  this.wordsArray = [];
+  this.words = [];
 };
 
 SplitAndCountWords.prototype.splitIntoWords= function (providedText){
-  this.wordsArray = providedText.split(" ")
+  this.words = providedText.split(" ")
 }
 
 SplitAndCountWords.prototype.countOccurrenceOfWords = function() {
-   this.wordsArray = this.wordsArray.reduce(function(allWords, currentWord){
+   this.words = this.words.reduce(function(allWords, currentWord){
      if (currentWord in allWords) {
        allWords[currentWord]++;
      }
@@ -17,7 +17,8 @@ SplitAndCountWords.prototype.countOccurrenceOfWords = function() {
      return allWords;
    }, {});
  };
-//
+
+
 SplitAndCountWords.prototype._isPrimeCalculator = function(countNumber) {
   if (countNumber != Math.round(countNumber) || countNumber <= 1) {return false}
     var isPrime = true;
@@ -28,7 +29,12 @@ SplitAndCountWords.prototype._isPrimeCalculator = function(countNumber) {
 };
 
 
+SplitAndCountWords.prototype.displayWords = function() {
+
+}
+
+
 module.exports.SplitAndCountWords = SplitAndCountWords;
 
 // splitAndCountWords = new SplitAndCountWords("test text with multiple occuring words")
-// splitAndCountWords.wordsArray
+// splitAndCountWords.words

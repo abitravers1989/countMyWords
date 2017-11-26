@@ -14,10 +14,10 @@ describe('splitAndCountWords',() => {
 
   describe('initialize',() => {
 
-    it("When a new instance is created the wordsArray property is set to an empty array", () => {
-      expect(splitAndCountWords.wordsArray).to.deep.equal([]);
-      expect(splitAndCountWords.wordsArray).to.have.lengthOf(0);
-      expect(splitAndCountWords.wordsArray).to.be.a('array');
+    it("When a new instance is created the words property is set to an empty array", () => {
+      expect(splitAndCountWords.words).to.deep.equal([]);
+      expect(splitAndCountWords.words).to.have.lengthOf(0);
+      expect(splitAndCountWords.words).to.be.a('array');
     });
 
   });
@@ -27,8 +27,8 @@ describe('splitAndCountWords',() => {
 
   it("Splits the text into individual words and puts them into key value pairs with their word count", () => {
     splitAndCountWords.splitIntoWords(testInputText);
-    expect(splitAndCountWords.wordsArray).to.deep.equal(expectedOutput1)
-    expect(splitAndCountWords.wordsArray).to.have.lengthOf(12);
+    expect(splitAndCountWords.words).to.deep.equal(expectedOutput1)
+    expect(splitAndCountWords.words).to.have.lengthOf(12);
   });
 });
 
@@ -38,7 +38,8 @@ describe('countWords',() => {
   it("Splits the text into individual words and puts them into key value pairs with their word count", () => {
     splitAndCountWords.splitIntoWords(testInputText);
     splitAndCountWords.countOccurrenceOfWords();
-    expect(splitAndCountWords.wordsArray).to.deep.equal(expectedOutput2)
+    expect(splitAndCountWords.words).to.deep.equal(expectedOutput2)
+    expect(splitAndCountWords.words).to.have.property("test")
   });
 
  });
@@ -73,5 +74,21 @@ describe('countWords',() => {
    });
 
  });
+
+
+
+
+ describe('displayWords',() => {
+
+   it("Displays the words in the text supplied to it, the number of times they occur, and whether this number is prime or not", () => {
+     splitAndCountWords.splitIntoWords(testInputText);
+     splitAndCountWords.countOccurrenceOfWords();
+     splitAndCountWords.displayWords();
+
+     expect(splitAndCountWords.words).to.deep.equal(expectedOutput2)
+   });
+
+  });
+
 
 });

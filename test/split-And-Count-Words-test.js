@@ -30,7 +30,7 @@ describe('splitAndCountWords',() => {
     expect(splitAndCountWords.wordsArray).to.deep.equal(expectedOutput1)
     expect(splitAndCountWords.wordsArray).to.have.lengthOf(12);
   });
- });
+});
 
 
 describe('countWords',() => {
@@ -40,6 +40,38 @@ describe('countWords',() => {
     splitAndCountWords.countOccurrenceOfWords();
     expect(splitAndCountWords.wordsArray).to.deep.equal(expectedOutput2)
   });
-});
+
+ });
+
+
+
+ describe('_isPrimeCalculator',() => {
+
+   it("Calculates if a number is prime or not, returning true or false. Returns true for 2.", () => {
+     var trueOrFalse = splitAndCountWords._isPrimeCalculator(2);
+     expect(trueOrFalse).to.equal(true)
+   });
+
+   it("Calculates if a number is prime or not, returning true or false. Returns true for 3.", () => {
+     var trueOrFalse = splitAndCountWords._isPrimeCalculator(3);
+     expect(trueOrFalse).to.equal(true)
+   });
+
+   it("Calculates if a number is prime or not, returning true or false. Returns false for 0.", () => {
+     var trueOrFalse = splitAndCountWords._isPrimeCalculator(0);
+     expect(trueOrFalse).to.equal(false)
+   });
+
+   it("Calculates if a number is prime or not, returning true or false. Returns false for -100.", () => {
+     var trueOrFalse = splitAndCountWords._isPrimeCalculator(-100);
+     expect(trueOrFalse).to.equal(false)
+   });
+
+   it("Calculates if a number is prime or not, returning true or false. Returns false for 9.78.", () => {
+     var trueOrFalse = splitAndCountWords._isPrimeCalculator(9.78);
+     expect(trueOrFalse).to.equal(false)
+   });
+
+ });
 
 });

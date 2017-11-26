@@ -7,7 +7,7 @@ describe('splitAndCountWords',() => {
   const testInputText = "test text with multiple occuring words test text test text occuring with"
   const expectedOutput1 = ["test", "text", "with", "multiple", "occuring", "words", "test", "text", "test", "text", "occuring", "with"]
   const expectedOutput2 = { test: 3, text: 3, with: 2, multiple: 1, occuring: 2, words: 1 };
-  const expectedOutput3 = "Word: test Occurance: 3 Prime?: Yes"
+  const expectedOutput3 = "Word: test    Count: 3     Prime: Yes Word: text    Count: 3     Prime: Yes Word: with    Count: 2     Prime: Yes Word: multiple    Count: 1     Prime: No Word: occuring    Count: 2     Prime: Yes Word: words    Count: 1     Prime: No"
 
 
   beforeEach(() => {
@@ -85,8 +85,7 @@ describe('countWords',() => {
    it("Displays the words in the text supplied to it, the number of times they occur, and whether this number is prime or not", () => {
      splitAndCountWords.splitIntoWords(testInputText);
      splitAndCountWords.countOccurrenceOfWords();
-     var output = splitAndCountWords.displayWords();
-     expect(output).to.equal(expectedOutput3)
+     expect(splitAndCountWords.displayWords()).to.equal(expectedOutput3)
    });
 
   });

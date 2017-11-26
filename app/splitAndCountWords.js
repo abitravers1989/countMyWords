@@ -3,7 +3,7 @@ function SplitAndCountWords() {
 };
 
 SplitAndCountWords.prototype.splitIntoWords= function (providedText){
-
+  this.wordsArray = providedText.split(" ")
 }
 //
 // SplitAndCountWords.prototype.countOccurrenceOfWords = function() {

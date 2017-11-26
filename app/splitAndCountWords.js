@@ -1,10 +1,10 @@
-function SplitAndCountWords(providedText) {
+function SplitAndCountWords() {
   this.wordsArray = [];
 };
 
-// SplitAndCountWords.prototype.splitWords= function (providedText){
-//
-// }
+SplitAndCountWords.prototype.splitIntoWords= function (providedText){
+
+}
 //
 // SplitAndCountWords.prototype.countOccurrenceOfWords = function() {
 //

@@ -5,9 +5,10 @@ describe('splitAndCountWords',() => {
   var splitAndCountWords;
 
   const testInputText = "test text with multiple occuring words test text test text occuring with"
+  const expectedOutput1 = ["test" "text" "with" "multiple" "occuring" "words" "test" "text" "test" "text" "occuring" "with"]
 
   beforeEach(() => {
-    splitAndCountWords = new SplitAndCountWords(testInputText);
+    splitAndCountWords = new SplitAndCountWords();
   });
 
   describe('initialize',() => {
@@ -21,15 +22,14 @@ describe('splitAndCountWords',() => {
   });
 
 
-//   describe('splitWords',() => {
-//
-//   it("Splits the text into individual words and puts them into key value pairs with their word count", () => {
-//     const testInputText = "Test TeXT LonGer Edition!!!! Test TeXT";
-//     const expectedOutput = ["test", "text", "longer", "edition"];
-//     splitAndCountWords.splitTextIntoWords();
-//     expect(splitAndCountWords.wordsArray).to.equal(expectedOutput)
-//   });
-// });
+  describe('splitIntoWords',() => {
+
+  it("Splits the text into individual words and puts them into key value pairs with their word count", () => {
+    splitAndCountWords.splitIntoWords(testInputText);
+    expect(splitAndCountWords.wordsArray).to.deep.equal(expectedOutput1)
+    expect(splitAndCountWords.wordsArray).to.have.lengthOf(12);
+  });
+});
 
 //
 // describe('countWords',() => {

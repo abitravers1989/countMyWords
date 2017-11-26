@@ -85,6 +85,14 @@ https://www.sitepoint.com/unit-test-javascript-mocha-chai/
 
 http://chaijs.com/guide/styles/#expect
 
+Node's FS file system:
+
+I have used this before in my final project. Needs to be syncronous because I don't want anything to happen until the data is loaded.
+I started with using it asyncronously but this loaded the file first then preformed the wordcounter app functionality on it.
+
+https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
+
+
 
 
 Submission checklist

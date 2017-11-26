@@ -1,5 +1,6 @@
 const expect  = require('chai').expect;
 const SplitAndCountWords = require('../app/splitAndCountWords').SplitAndCountWords;
+const sinon  = require('sinon');
 
 describe('splitAndCountWords',() => {
   var splitAndCountWords;
@@ -83,9 +84,11 @@ describe('countWords',() => {
  describe('displayWords',() => {
 
    it("Displays the words in the text supplied to it, the number of times they occur, and whether this number is prime or not", () => {
+     let spy = sinon.spy(console, 'log');
      splitAndCountWords.splitIntoWords(testInputText);
      splitAndCountWords.countOccurrenceOfWords();
-     expect(splitAndCountWords.displayWords()).to.equal(expectedOutput3)
+     splitAndCountWords.displayWords();
+     expect(spy.calledWith(expectedOutput3))
    });
 
   });

@@ -18,9 +18,14 @@ SplitAndCountWords.prototype.countOccurrenceOfWords = function() {
    }, {});
  };
 //
-// SplitAndCountWords.prototype._isPrime = function() {
-//
-// };
+SplitAndCountWords.prototype._isPrimeCalculator = function(countNumber) {
+  if (countNumber != Math.round(countNumber) || countNumber <= 1) {return false}
+    var isPrime = true;
+    for (var i = 2; i <= Math.sqrt(countNumber); i++) {
+      if (countNumber % i == 0) {isPrime = false}
+    }
+  return isPrime;
+};
 
 
 module.exports.SplitAndCountWords = SplitAndCountWords;

@@ -5,7 +5,7 @@ describe('splitAndCountWords',() => {
   var splitAndCountWords;
 
   const testInputText = "test text with multiple occuring words test text test text occuring with"
-  const expectedOutput1 = ["test" "text" "with" "multiple" "occuring" "words" "test" "text" "test" "text" "occuring" "with"]
+  const expectedOutput1 = ["test", "text", "with", "multiple", "occuring", "words", "test", "text", "test", "text", "occuring", "with"]
 
   beforeEach(() => {
     splitAndCountWords = new SplitAndCountWords();

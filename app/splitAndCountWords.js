@@ -30,11 +30,25 @@ SplitAndCountWords.prototype._isPrimeCalculator = function(countNumber) {
 
 
 SplitAndCountWords.prototype.displayWords = function() {
+  var words = this.words
+   Object.keys(words).forEach(function(key){
+     var countPrime = words[key]._isPrimeCalculator
+    if (countPrime === true) {
+     console.log(key + ':' + words[key] + 'Prime')
+    }
+    else {
+      console.log(key + ':' + words[key] + 'NotPrime')
+    }
+   });
+};
 
+SplitAndCountWords.prototype.callFunctions = function(providedText){
+  this.splitIntoWords(providedText);
+  this.countOccurrenceOfWords();
 }
 
+// module.exports.SplitAndCountWords = SplitAndCountWords;
 
-module.exports.SplitAndCountWords = SplitAndCountWords;
-
-// splitAndCountWords = new SplitAndCountWords("test text with multiple occuring words")
-// splitAndCountWords.words
+splitAndCountWords = new SplitAndCountWords()
+splitAndCountWords.callFunctions("test test text text text text text with multiple occuring words test text");
+splitAndCountWords.displayWords();

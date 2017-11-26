@@ -109,6 +109,9 @@ I started with using it asyncronously but this loaded the file first then prefor
 https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
 
 
+DisplayWords functionality in splitAndCountWords module:
+
+http://clubmate.fi/javascript-manipulating-objects-with-object-keys/
 
 
 Submission checklist

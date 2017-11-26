@@ -12,8 +12,8 @@ CleanInputText.prototype.checkInputValidator= function (providedText){
   };
 }
 
-CleanInputText.prototype.removePunctuation = function() {
-  this.initialText = this.initialText.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+CleanInputText.prototype.removePunctuationAndWhitespace = function() {
+  this.initialText = this.initialText.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s+/g, " ");
 }
 
 CleanInputText.prototype.removeCapitalisation = function() {
@@ -22,7 +22,7 @@ CleanInputText.prototype.removeCapitalisation = function() {
 
 CleanInputText.prototype.cleanTextFunctions = function (providedText) {
   this.checkInputValidator(providedText);
-  this.removePunctuation();
+  this.removePunctuationAndWhitespace();
   this.removeCapitalisation();
 }
 

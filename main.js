@@ -4,14 +4,23 @@ const cleanInputText = new CleanInputText();
 var fs = require('fs');
 
 
-function runWordCounterApp(){
-  // make sysnc?
-  fs.readFile('./public/sampleTextFile.txt','utf8', function(err,data){
-    if(err) throw err;
-    cleanInputText.checkInputValidator(data)
-    console.log("inputtext")
-    console.log(cleanInputText.initialText)
-  })
+function RunWordCounterApp(filename){
+  this.fileContents;
 }
 
-runWordCounterApp();
+RunWordCounterApp.prototype.readInputTextFile = function(filename) {
+  setTimeout(function(filename){
+    fileContents = fs.readFileSync(filename,'utf8')
+    return fileContents;
+  }, 80000)
+};
+
+RunWordCounterApp.prototype.runAppFunctions = function(){
+  cleanInputText.checkInputValidator(this.readInputTextFile)
+  console.log("inputtext")
+  console.log(cleanInputText.initialText)
+};
+
+runApp = new RunWordCounterApp('./public/sampleTextFile.txt');
+// runWordCounterApp('./public/sampleTextFile.txt');
+runApp.runAppFunctions();

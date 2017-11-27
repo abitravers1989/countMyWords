@@ -1,8 +1,8 @@
 {
   "name": "wordcounter",
   "version": "1.0.0",
-  "description": "### The what:",
-  "main": "index.js",
+  "description": "A word counter commandline application",
+  "main": "main.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
@@ -13,6 +13,8 @@
     "mocha": "^4.0.1"
   },
   "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-config-google": "^0.9.1",
     "istanbul": "^0.4.5"
   }
 }

@@ -3,8 +3,7 @@ const sinon  = require('sinon');
 const CleanInputText = require('../app/cleanInputText').CleanInputText;
 
 describe('CleanInputText', () => {
-  var cleanInputText;
-
+  let cleanInputText;
 
   const testInputText1 = "Test text";
   const testInputNumber2 = 0000099090;
@@ -19,29 +18,22 @@ describe('CleanInputText', () => {
   const testInputText8 = "Test TeXT LonGer Edition!!!!";
   const expectedOutput8 = "test text longer edition";
 
-
   beforeEach(() => {
     cleanInputText = new CleanInputText();
   });
 
-
   describe('initialize',() => {
-
     it("When a new instance is created the initalText property is set to false", () => {
       expect(cleanInputText.initialText).to.equal(false);
     });
-
   });
 
-
   describe('checkInputValidator',() => {
-
     it("Sets initalText to the text supplied to it, if this is indeed text and not something else such as a picture or number.", () => {
       cleanInputText.checkInputValidator(testInputText1);
       expect(cleanInputText.initialText).to.be.a('string');
       expect(cleanInputText.initialText).to.have.lengthOf(9);
     });
-
 
     it("Outputs an error message if word Counter is initalised with something which is not a string", () => {
       let spy = sinon.spy(console, 'log');
@@ -50,13 +42,9 @@ describe('CleanInputText', () => {
       expect(cleanInputText.initialText).to.equal(false);
       spy.restore();
     });
-
   });
 
-
-
   describe('removePunctuationAndWhitespace',() => {
-
     it("Removes punctuation from text", () => {
       cleanInputText.checkInputValidator(testInputText3);
       cleanInputText.removePunctuationAndWhitespace();
@@ -74,28 +62,21 @@ describe('CleanInputText', () => {
       cleanInputText.removePunctuationAndWhitespace();
       expect(cleanInputText.initialText).to.equal(expectedOutput5)
     });
-
   });
 
-
   describe('removeCapitalisation',() => {
-
     it("It converts capital letters to downcase", () => {
       cleanInputText.checkInputValidator(testInputText7);
       cleanInputText.removeCapitalisation();
       expect(cleanInputText.initialText).to.equal(expectedOutput7)
     });
-
   });
 
-
   describe('callAllCleanTextFunctions',() => {
-
     it("Calls all the above functions which clean the text so it contains no capitalisation or punctuation", () => {
       cleanInputText.callAllCleanTextFunctions(testInputText8)
       expect(cleanInputText.initialText).to.equal(expectedOutput8)
     });
-
   });
 
 });

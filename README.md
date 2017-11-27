@@ -128,6 +128,7 @@ Chosen testing framwork:
 Feature test / Testing Main:
 
 Attempted to do a feature test which did the same as main did. However I wasn't sure this was necissary as all main does is call the other modules plus the node module fs.
+However it was useful for revealing some naming improvements for the two functions which called all the other functions within their module.
 
 
 
@@ -135,6 +136,7 @@ Attempted to do a feature test which did the same as main did. However I wasn't 
 MVP+
 
 Remove Roman numerals and numbers from the text.
+Sort the words. So they are displayed in order of frequency, from most frequent to least.
 
 
 

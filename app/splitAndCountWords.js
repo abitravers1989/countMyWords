@@ -33,10 +33,10 @@ SplitAndCountWords.prototype.displayWords = function() {
   var words = this.words
   for (key in words){
     if (this._isPrimeCalculator(words[key])){
-     console.log('Word: ' + key + '    Count: ' + words[key] + ' ' + '    Prime: Yes')
+     console.log('Word: ' + key + ' || Count: ' + words[key] + ' ' + '|| Prime: Yes')
     }
     else {
-     console.log('Word: ' + key + '    Count: ' + words[key] + ' ' + '    Prime: No')
+     console.log('Word: ' + key + ' || Count: ' + words[key] + ' ' + '|| Prime: No')
     }
   };
 };

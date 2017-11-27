@@ -1,4 +1,5 @@
-
+// This file reads text from a file using the node fs module. Then calls the word-counter-app's cleanInputText then SplitAndCountWords
+// modules to split the text into words, their frequency and weather they are a prime number or not.
 const CleanInputText = require('./src/cleanInputText').CleanInputText;
 const cleanInputText = new CleanInputText();
 const SplitAndCountWords = require('./src/splitAndCountWords').SplitAndCountWords;

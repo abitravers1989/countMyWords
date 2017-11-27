@@ -175,6 +175,23 @@ One of my biggest struggles was creating a sinon spy for console.log which could
 
 
 
+Made easier by experience doing prime numbers test: LINK
+This meant i already had the functionality for checking if a number was prime or not.
+
+
+Challenges:
+
+-
+
+
+Index.js:
+
+Unsure where is best to declare the file variable. Now it is a global variable...
+didn't want to wrap it in the function because of MVP ++.
+..have wrapped it in the function for now but would take it out for MVP ++ DO THIS!!!!!! 
+
+
+
 
 MVP+
 

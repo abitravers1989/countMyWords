@@ -81,8 +81,6 @@ describe('countWords',() => {
  });
 
 
-
-
  describe('displayWords',() => {
 
    it("Displays the words in the text supplied to it, the number of times they occur, and whether this number is prime or not", () => {

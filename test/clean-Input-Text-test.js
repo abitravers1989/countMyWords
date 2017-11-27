@@ -44,15 +44,7 @@ describe('CleanInputText', () => {
 
   describe('removePunctuationAndWhitespace',() => {
 
-    it("It removes all punctuation", () => {
-      const testInputText = "Test text!!! I. but---";
-      const expectedOutput = "Test text I but";
-      cleanInputText.checkInputValidator(testInputText);
-      cleanInputText.removePunctuationAndWhitespace();
-      expect(cleanInputText.initialText).to.equal(expectedOutput)
-    });
-
-    it("It removes punctuation, more examples", () => {
+    it("Removes punctuation from text", () => {
       const testInputText = "Test text!!!???? ?I.i'ds':$$ *HI but---";
       const expectedOutput = "Test text Iids HI but";
       cleanInputText.checkInputValidator(testInputText);
@@ -60,7 +52,7 @@ describe('CleanInputText', () => {
       expect(cleanInputText.initialText).to.equal(expectedOutput)
     });
 
-    it("It removes punctuation, even more examples", () => {
+    it("Removes punctuation from text, all punctuation or strange characters", () => {
       const testInputText = "!?'/.:$*HI-+)(&{/}^%£@|±~``§,;=-end";
       const expectedOutput = "HIend";
       cleanInputText.checkInputValidator(testInputText);
@@ -68,9 +60,17 @@ describe('CleanInputText', () => {
       expect(cleanInputText.initialText).to.equal(expectedOutput)
     });
 
-    it("It removes all punctuation from a larger text file", () => {
+    it("Removes punctuation and whitespace from a larger text file", () => {
       const testInputText = "Contents. I.    The beginning of things. II.   Peter's coal-mine.III.  The old gentlem XIII. The hound's grandfatherXIV.  The End.Chapter I. The beginning of things."
       const expectedOutput = "Contents I The beginning of things II Peters coalmineIII The old gentlem XIII The hounds grandfatherXIV The EndChapter I The beginning of things"
+      cleanInputText.checkInputValidator(testInputText);
+      cleanInputText.removePunctuationAndWhitespace();
+      expect(cleanInputText.initialText).to.equal(expectedOutput)
+    });
+
+    it("Removes Roman numerals", () => {
+      const testInputText = "Contents. I.    The beginning of things. II.   Peter's coal-mine.III.  The old gentlem XIII. The hound's grandfatherXIV.  The End.Chapter I. The beginning of things."
+      const expectedOutput = "Contents The beginning of things Peters coalmine The old gentlem The hounds grandfather The EndChapter The beginning of things"
       cleanInputText.checkInputValidator(testInputText);
       cleanInputText.removePunctuationAndWhitespace();
       expect(cleanInputText.initialText).to.equal(expectedOutput)

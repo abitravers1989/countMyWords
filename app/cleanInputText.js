@@ -13,7 +13,7 @@ CleanInputText.prototype.checkInputValidator= function (providedText){
 }
 
 CleanInputText.prototype.removePunctuationAndWhitespace = function() {
-  this.initialText = this.initialText.replace(/[.,\/#!$%\^&\*;:{}=\-_`+@""?'~()]/g,"").replace(/\s+/g, " ");
+  this.initialText = this.initialText.replace(/[.,\/#!$%\^&\*;:{}=\-_`+@""?'~()£|±§]/g,"").replace(/\s+/g, " ");
 }
 
 CleanInputText.prototype.removeCapitalisation = function() {

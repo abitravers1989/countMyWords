@@ -2,20 +2,41 @@
 
 ### The what:
 
-This is a node application which; takes a text file (Supplied by the user), outputs the individual words which are in the book along with their word count.
+A simple command-line node application.
 
-It them displays if their word count is a prime number or not.
+It takes the example text file (saved as 'sampleTextFile' in the public folder of this directory).
+It outputs, to the console, the words which appear in that file, their frequency and if that number is prime or not.
+
+## Getting started
+
+Open your terminal.
+
+Make sure you have node already installed by typing:
+
+`````
+$node -v
+`````
+
+Next, still in your terminal, clone this directory then navigate to that folder:
+
+`````
+`````
 
 ## How you can use it
 
+![Using the application ](https://github.com/abitravers1989/countMyWords/blob/master/public/using-application.mp4)
 
-## Testing
 
-To Test run:
+
+## Running the testing
+
+If you are not already there navigate to the project folder in your terminal. Then type:
 
 ````
 $npm test
 ````
+![Running the tests ](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/WorkingPrimesApp.gif)
+
 
 Test Coverage:
 
@@ -33,6 +54,7 @@ Liniting, which basically means ensuring the
 Used Chai with Mocha. I chose this over Jasmine for 2 reasons: 1. Jasmine needs the browser and a spec runner file to function when I have used it in the past. Since I chose to make a commandline application / simple node application I did not want to use a testing framework which required the browser if my application itself did not.
 2. Chai allows more extensive testing, there are multiple things you can do with it which I am not sure about how to do with jasmine / if you can.. such as also asserting the length of an array.
 Chai: http://chaijs.com/guide/styles/#expect
+
 
 
 
@@ -84,6 +106,12 @@ From each word any punctuation or capitalisation is removed.
 
 ## My approach
 
+## Dependancies and trade-offs
+
+Describe the dependencies your code has. What trade-offs did you make when deciding what dependencies to use?
+
+### Level of abstraction chosen and why split the way it was
+
 
 ## Why I chose node:
 
@@ -106,7 +134,6 @@ Next feature:
 It formats this and displays it in a html file which is rendered in the browser.
 
 
-### Level of abstraction chosen and why split the way it was
 
 ### Testing
 

@@ -14,40 +14,63 @@ Open your terminal.
 Make sure you have node already installed by typing:
 
 `````
-$node -v
+$ node -v
 `````
 
 Next, still in your terminal, clone this directory then navigate to that folder:
 
 `````
+$ git clone  ?????????????????????
+$ cd wordCounterApp
 `````
 
-## How you can use it
+Install the dependencies:
+
+`````
+$ $npm install
+`````
+
+## How to use it
+
+If you are not still there navigate back to the project folder in your terminal. Then type:
+
+`````
+$ npm start
+`````
+or
+`````
+$ node index.js
+`````
 
 ![Using the application ](https://github.com/abitravers1989/countMyWords/blob/master/public/using-application.mp4)
 
 
+## Running the tests
 
-## Running the testing
-
-If you are not already there navigate to the project folder in your terminal. Then type:
+If you are not still there navigate back to the project folder in your terminal. Then type:
 
 ````
 $npm test
 ````
-![Running the tests ](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/WorkingPrimesApp.gif)
+![Running the tests ](https://github.com/abitravers1989/countMyWords/blob/master/public/running-tests.mp4)
 
 
-Test Coverage:
+#### Test Coverage:
 
-Giff
+- 18 Tests with 95% test coverage.
 
-Test coverage has been calculated using Istanbul.
-https://istanbul.js.org/
+Why is test coverage is not 100%?:
 
-Liniting, which basically means ensuring the
 
-## Set Task
+
+
+## Technologies
+
+Code language: Javascript
+Application framework?: Node.js
+Test: Chai and mocha   http://chaijs.com/guide/styles/#expect
+Test Coverage: ![Istanbul ](https://istanbul.js.org/)
+Linitng (ensuring code is formatted correctly): ESLint
 
 ## Why I chose the testing frameworks I did:
 
@@ -56,6 +79,9 @@ Used Chai with Mocha. I chose this over Jasmine for 2 reasons: 1. Jasmine needs 
 Chai: http://chaijs.com/guide/styles/#expect
 
 
+## My approach
+
+MVP
 
 
 ## Application Journey / User Story
@@ -105,6 +131,8 @@ From each word any punctuation or capitalisation is removed.
 
 
 ## My approach
+
+MVP
 
 ## Dependancies and trade-offs
 

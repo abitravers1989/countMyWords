@@ -61,8 +61,8 @@ describe('CleanInputText', () => {
     });
 
     it("It removes punctuation, even more examples", () => {
-      const testInputText = "Test text!!!????'/' ?I.i'ds':$$ *HI but---";
-      const expectedOutput = "Test text Iids HI but";
+      const testInputText = "!?'/.:$*HI-+)(&{/}^%£@|±~``§,;=-end";
+      const expectedOutput = "HIend";
       cleanInputText.checkInputValidator(testInputText);
       cleanInputText.removePunctuationAndWhitespace();
       expect(cleanInputText.initialText).to.equal(expectedOutput)

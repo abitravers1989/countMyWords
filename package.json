@@ -2,7 +2,7 @@
   "name": "wordcounter",
   "version": "1.0.0",
   "description": "A word counter commandline application",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "nyc mocha"
   },

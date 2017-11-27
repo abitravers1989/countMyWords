@@ -1,7 +1,7 @@
 
-const CleanInputText = require('./app/cleanInputText').CleanInputText;
+const CleanInputText = require('./src/cleanInputText').CleanInputText;
 const cleanInputText = new CleanInputText();
-const SplitAndCountWords = require('./app/splitAndCountWords').SplitAndCountWords;
+const SplitAndCountWords = require('./src/splitAndCountWords').SplitAndCountWords;
 const splitAndCountWords = new SplitAndCountWords();
 var fs = require('fs');
 

@@ -1,6 +1,6 @@
 const expect  = require('chai').expect;
 const sinon  = require('sinon');
-const CleanInputText = require('../app/cleanInputText').CleanInputText;
+const CleanInputText = require('../src/cleanInputText').CleanInputText;
 
 describe('CleanInputText', () => {
   let cleanInputText;

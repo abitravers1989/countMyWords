@@ -1,5 +1,5 @@
 const expect  = require('chai').expect;
-const SplitAndCountWords = require('../app/splitAndCountWords').SplitAndCountWords;
+const SplitAndCountWords = require('../src/splitAndCountWords').SplitAndCountWords;
 const sinon  = require('sinon');
 
 describe('splitAndCountWords',() => {

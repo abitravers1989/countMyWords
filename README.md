@@ -101,6 +101,14 @@ so had to find a way to access the keys in the hash differently
 
 syncronousity of fs.readfile
 
+## Reflection
+
+At first my tests were not thorough enough. For the functionality which removed all punctuation and whitespace, I had not tested it against every type of character. When I added another test to include all characters it revealed the method (the regex expression within it) was lacking.
+
+While writing the first set of tests for the split-and-count-words module I became unsure about the level of abstarction I had designed.
+- When giving this module sample input I had to make sure the sample input contained no capitals, punctuation or whiteshape. This functionality should be done by the clean-input-text module which should be ran before it, however if there was an issue in they way the classes were called in main (as it may not be obvious that you have to 'clean' the input text before splitting and counting it) then the programme wouldn't deliever to the spec. As punctuation and capitalised words would be counted as different words.
+- this made me think maybe since the split-and-count-words functionality / module and the clean-input-text both relay on each other to deliver the relatively simple MVP with all functionality they could have been within one module. This would also reduce the amount of code having to be written,.. for example at the bottom of each of these 2 modules I write a function which calls the other functions in that module .. this could just be one function if they were together. Also there would be less code in the tests and I could be more thoroughly convinced all the functions were working together as intended .. because ...
+
 
 ### Resources
 

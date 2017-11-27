@@ -95,7 +95,7 @@ describe('countWords',() => {
 
    //
    //
-   // describe('callFunctions',() => {
+   // describe('callAllFunctions',() => {
    //
    //   it("All the functions work together to split text into words, count the words then display this with if the count number is prime or not", () => {
    //     var output = splitAndCountWords.callFunctions(testInputText2);

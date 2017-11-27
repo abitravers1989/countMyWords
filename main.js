@@ -7,9 +7,9 @@ var fs = require('fs');
 const textFile = fs.readFileSync('./public/sampleTextFile.txt','utf8')
 
 function RunWordCounterApp(){
-   cleanInputText.cleanTextFunctions(textFile)
+   cleanInputText.callAllCleanTextFunctions(textFile)
    // console.log(cleanInputText.initialText)
-   splitAndCountWords.callFunctions(cleanInputText.initialText);
+   splitAndCountWords.callAllFunctions(cleanInputText.initialText);
 }
 
 RunWordCounterApp();

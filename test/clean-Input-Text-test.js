@@ -89,10 +89,10 @@ describe('CleanInputText', () => {
   });
 
 
-  describe('cleanTextFunctions',() => {
+  describe('callAllCleanTextFunctions',() => {
 
     it("Calls all the above functions which clean the text so it contains no capitalisation or punctuation", () => {
-      cleanInputText.cleanTextFunctions(testInputText8)
+      cleanInputText.callAllCleanTextFunctions(testInputText8)
       expect(cleanInputText.initialText).to.equal(expectedOutput8)
     });
 

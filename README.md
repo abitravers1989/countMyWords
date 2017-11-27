@@ -125,6 +125,11 @@ In this case I committed when I wrote the tests, so looking back through the his
 Chosen testing framwork:
 
 
+Feature test / Testing Main:
+
+Attempted to do a feature test which did the same as main did. However I wasn't sure this was necissary as all main does is call the other modules plus the node module fs.
+
+
 
 
 MVP+

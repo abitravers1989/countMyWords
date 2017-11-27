@@ -41,7 +41,7 @@ SplitAndCountWords.prototype.displayWords = function() {
   };
 };
 
-SplitAndCountWords.prototype.callFunctions = function(providedText){
+SplitAndCountWords.prototype.callAllFunctions = function(providedText){
   this.splitIntoWords(providedText);
   this.countOccurrenceOfWords();
   this.displayWords();

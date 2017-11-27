@@ -20,7 +20,7 @@ CleanInputText.prototype.removeCapitalisation = function() {
   this.initialText = this.initialText.toLowerCase();
 }
 
-CleanInputText.prototype.cleanTextFunctions = function (providedText) {
+CleanInputText.prototype.callAllCleanTextFunctions = function (providedText) {
   this.checkInputValidator(providedText);
   this.removePunctuationAndWhitespace();
   this.removeCapitalisation();

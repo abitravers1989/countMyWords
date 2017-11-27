@@ -52,9 +52,17 @@ describe('CleanInputText', () => {
       expect(cleanInputText.initialText).to.equal(expectedOutput)
     });
 
+    it("It removes punctuation, more examples", () => {
+      const testInputText = "Test text!!!???? ?I.i'ds':$$ *HI but---";
+      const expectedOutput = "Test text Iids HI but";
+      cleanInputText.checkInputValidator(testInputText);
+      cleanInputText.removePunctuationAndWhitespace();
+      expect(cleanInputText.initialText).to.equal(expectedOutput)
+    });
+
     it("It removes all punctuation from a larger text file", () => {
       const testInputText = "Contents. I.    The beginning of things. II.   Peter's coal-mine.III.  The old gentlem XIII. The hound's grandfatherXIV.  The End.Chapter I. The beginning of things."
-      const expectedOutput = "Contents I The beginning of things II Peter's coalmineIII The old gentlem XIII The hound's grandfatherXIV The EndChapter I The beginning of things"
+      const expectedOutput = "Contents I The beginning of things II Peters coalmineIII The old gentlem XIII The hounds grandfatherXIV The EndChapter I The beginning of things"
       cleanInputText.checkInputValidator(testInputText);
       cleanInputText.removePunctuationAndWhitespace();
       expect(cleanInputText.initialText).to.equal(expectedOutput)

@@ -44,10 +44,7 @@ SplitAndCountWords.prototype.displayWords = function() {
 SplitAndCountWords.prototype.callFunctions = function(providedText){
   this.splitIntoWords(providedText);
   this.countOccurrenceOfWords();
+  this.displayWords();
 }
 
 module.exports.SplitAndCountWords = SplitAndCountWords;
-
-// splitAndCountWords = new SplitAndCountWords()
-// splitAndCountWords.callFunctions("test text with multiple occuring words test text test text occuring with");
-// splitAndCountWords.displayWords();

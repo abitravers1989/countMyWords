@@ -90,6 +90,17 @@ This was my first attempt. This obviously didn't work because the variable fileC
 
 I designed the MVP as I did because I had recently done something in the command line. I wanted to get the simplistest working products
 
+## Issues
+
+tring to access ```_isPrimeCalculator``` method from within object.keys loop as it changed the environmental context .. all of a sudden because it was being called on Object not the module I defined the context / environment of this was not the split-and-count-words but the global? environment.
+
+so had to find a way to access the keys in the hash differently
+
+
+
+
+syncronousity of fs.readfile
+
 
 ### Resources
 

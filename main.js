@@ -1,26 +1,15 @@
 const CleanInputText = require('./app/cleanInputText').CleanInputText;
-// const SplitAndCountWords = require('../app/splitAndCountWords').SplitAndCountWords;
 const cleanInputText = new CleanInputText();
+const SplitAndCountWords = require('./app/splitAndCountWords').SplitAndCountWords;
+const splitAndCountWords = new SplitAndCountWords();
 var fs = require('fs');
 
+const textFile = fs.readFileSync('./public/sampleTextFile.txt','utf8')
 
-function RunWordCounterApp(filename){
-  this.fileContents;
+function RunWordCounterApp(){
+   cleanInputText.cleanTextFunctions(textFile)
+   // console.log(cleanInputText.initialText)
+   splitAndCountWords.callFunctions(cleanInputText.initialText);
 }
 
-RunWordCounterApp.prototype.readInputTextFile = function(filename) {
-  setTimeout(function(filename){
-    fileContents = fs.readFileSync(filename,'utf8')
-    return fileContents;
-  }, 80000)
-};
-
-RunWordCounterApp.prototype.runAppFunctions = function(){
-  cleanInputText.checkInputValidator(this.readInputTextFile)
-  console.log("inputtext")
-  console.log(cleanInputText.initialText)
-};
-
-runApp = new RunWordCounterApp('./public/sampleTextFile.txt');
-// runWordCounterApp('./public/sampleTextFile.txt');
-runApp.runAppFunctions();
+RunWordCounterApp();

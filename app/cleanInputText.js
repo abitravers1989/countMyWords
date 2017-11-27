@@ -1,6 +1,5 @@
 // Module cleans the input text.
 // First it checks it is valid(is text), then it removes punctuation next whitespace, lastly it removes capitalisation.
-
 function CleanInputText(providedText) {
   this.initialText = false;
 };

@@ -7,6 +7,30 @@ This is a node application which; takes a text file (Supplied by the user), outp
 It them displays if their word count is a prime number or not.
 
 
+## Testing
+
+To Test run:
+
+````
+$npm test
+````
+
+Test Coverage:
+
+Giff
+
+Test coverage has been calculated using Istanbul.
+https://istanbul.js.org/
+
+Liniting, which basically means ensuring the
+
+## Why I chose the testing frameworks I did:
+
+Used Chai with Mocha. I chose this over Jasmine for 2 reasons: 1. Jasmine needs the browser and a spec runner file to function when I have used it in the past. Since I chose to make a commandline application / simple node application I did not want to use a testing framework which required the browser if my application itself did not.
+2. Chai allows more extensive testing, there are multiple things you can do with it which I am not sure about how to do with jasmine / if you can.. such as also asserting the length of an array.
+Chai: http://chaijs.com/guide/styles/#expect
+
+
 
 ## Application Journey / User Story
 
@@ -111,6 +135,15 @@ syncronousity of fs.readfile
 
 ## Reflection
 
+
+Issues with using Spy .. unsure of the encapsulation .. why it is going through files sometimes and not others.
+
+
+
+
+
+
+
 At first my tests were not thorough enough. For the functionality which removed all punctuation and whitespace, I had not tested it against every type of character. When I added another test to include all characters it revealed the method (the regex expression within it) was lacking.
 
 While writing the first set of tests for the split-and-count-words module I became unsure about the level of abstarction I had designed.
@@ -130,6 +163,14 @@ Feature test / Testing Main:
 Attempted to do a feature test which did the same as main did. However I wasn't sure this was necissary as all main does is call the other modules plus the node module fs.
 However it was useful for revealing some naming improvements for the two functions which called all the other functions within their module.
 
+Split-And-Count-Words Testing:
+
+One of my biggest struggles was creating a sinon spy for console.log which could be used by more than one test. I changed the scope of where this spy was defined to inside the main module describe functionality, instead the 'displayWords' describe functionality (with both it blocks being called there), to defining it twice under a new name.  This either gave me an error that the spy was not defined or that i was attempting to create a spy for something (log) which had already been wrapped.
+
+- The test for callAllFunctions was simply to check the functions were called in the right order.
+
+- It effected my test coverage.
+
 
 
 
@@ -137,6 +178,10 @@ MVP+
 
 Remove Roman numerals and numbers from the text.
 Sort the words. So they are displayed in order of frequency, from most frequent to least.
+
+MVP ++
+
+User is prompted to input the file by the comandline.So the word counter can be used for other files. I would do this using the real line module in node. I would console.log a prompt for the user to add the file name. This would then go into a function to read a file - fs module would be used. It could be further improved with the fs open file functionality which would allow the user to open a file on their local desktop and then this could be read.
 
 
 

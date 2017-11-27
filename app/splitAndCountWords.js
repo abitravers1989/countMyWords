@@ -1,6 +1,5 @@
 // Module splits text file into words, then calculates each words frequency.
 // Next it outputs these words and frequncy as well as if this number is prime or not.
-
 function SplitAndCountWords() {
   this.words = [];
 };

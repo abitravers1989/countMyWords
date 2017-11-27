@@ -4,6 +4,7 @@ const sinon  = require('sinon');
 
 describe('splitAndCountWords',() => {
   let splitAndCountWords;
+  var sandbox;
 
   const testInputText = "test text with multiple occuring words test text test text occuring with"
   const expectedOutput1 = ["test", "text", "with", "multiple", "occuring", "words", "test", "text", "test", "text", "occuring", "with"]
@@ -12,6 +13,11 @@ describe('splitAndCountWords',() => {
 
   beforeEach(() => {
     splitAndCountWords = new SplitAndCountWords();
+    sandbox = sinon.sandbox.create();
+  });
+
+  afterEach(function () {
+    sandbox.restore();
   });
 
   describe('initialize',() => {
@@ -68,10 +74,18 @@ describe('splitAndCountWords',() => {
 
  describe('displayWords',() => {
    it("Displays the words in the text supplied to it, the number of times they occur, and whether this number is prime or not", () => {
-     let spy = sinon.spy(console, 'log');
+     let spy = sandbox.stub(console, 'log');
      splitAndCountWords.splitIntoWords(testInputText);
      splitAndCountWords.countFrequencyOfWords();
      splitAndCountWords.displayWords();
+     expect(spy.calledWith(expectedOutput3))
+   });
+ });
+
+ describe('callAllFunctions',() => {
+   it("Calls all the other functions in this module in the correct order", () => {
+     let spy = sandbox.stub(console, 'log');
+     splitAndCountWords.callAllFunctions(testInputText);
      expect(spy.calledWith(expectedOutput3))
    });
  });

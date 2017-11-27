@@ -6,6 +6,8 @@ This is a node application which; takes a text file (Supplied by the user), outp
 
 It them displays if their word count is a prime number or not.
 
+# How to run / use it
+
 
 ## Testing
 

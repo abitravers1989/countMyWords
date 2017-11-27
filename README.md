@@ -6,7 +6,7 @@ This is a node application which; takes a text file (Supplied by the user), outp
 
 It them displays if their word count is a prime number or not.
 
-# How to run / use it
+## How you can use it
 
 
 ## Testing
@@ -25,6 +25,8 @@ Test coverage has been calculated using Istanbul.
 https://istanbul.js.org/
 
 Liniting, which basically means ensuring the
+
+## Set Task
 
 ## Why I chose the testing frameworks I did:
 
@@ -179,6 +181,9 @@ Made easier by experience doing prime numbers test: LINK
 This meant i already had the functionality for checking if a number was prime or not.
 
 
+Also i had experience reading files / using fs module of node in my final project
+
+
 Challenges:
 
 -
@@ -188,7 +193,7 @@ Index.js:
 
 Unsure where is best to declare the file variable. Now it is a global variable...
 didn't want to wrap it in the function because of MVP ++.
-..have wrapped it in the function for now but would take it out for MVP ++ DO THIS!!!!!! 
+..have wrapped it in the function for now but would take it out for MVP ++ DO THIS!!!!!!
 
 
 

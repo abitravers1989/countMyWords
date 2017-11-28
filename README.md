@@ -1,5 +1,7 @@
 ## Word Counter Application
 
+![Using the application](https://github.com/abitravers1989/countMyWords/blob/master/public/using-application.mp4)
+
 ### The what:
 
 A simple command-line node application.
@@ -20,7 +22,7 @@ $ node -v
 Next, still in your terminal, clone this directory then navigate to that folder:
 
 `````
-$ git clone  ?????????????????????
+$ git clone https://github.com/abitravers1989/countMyWords.git
 $ cd wordCounterApp
 `````
 
@@ -38,12 +40,10 @@ If you are not still there navigate back to the project folder in your terminal.
 $ npm start
 `````
 or
+
 `````
 $ node index.js
 `````
-
-![Using the application ](https://github.com/abitravers1989/countMyWords/blob/master/public/using-application.mp4)
-
 
 ## Running the tests
 
@@ -59,10 +59,6 @@ $npm test
 
 - 18 Tests with 95% test coverage.
 
-Why is test coverage is not 100%?:
-
-
-
 
 ## Technologies
 
@@ -72,41 +68,86 @@ Test: Chai and mocha   http://chaijs.com/guide/styles/#expect
 Test Coverage: ![Istanbul ](https://istanbul.js.org/)
 Linitng (ensuring code is formatted correctly): ESLint
 
-## Why I chose the testing frameworks I did:
-
-Used Chai with Mocha. I chose this over Jasmine for 2 reasons: 1. Jasmine needs the browser and a spec runner file to function when I have used it in the past. Since I chose to make a commandline application / simple node application I did not want to use a testing framework which required the browser if my application itself did not.
-2. Chai allows more extensive testing, there are multiple things you can do with it which I am not sure about how to do with jasmine / if you can.. such as also asserting the length of an array.
-Chai: http://chaijs.com/guide/styles/#expect
-
 
 ## My approach
 
+
+I tried to use lean/agile methodology by creating the minimum / most simple application which would still satisfy the given criteria. This is why I chose to make a commandline node application which involved less code than a browser application(as didn't have to create the views).
+
+
+#### Programme design approach
+
 MVP
 
+- Commandline node app.
+- The textFile is pre-supplied and hard-coded into the programme.
+- On running the programme the words, their frequency and if this number is prime or not, appears in the terminal.
 
-## Application Journey / User Story
-
-`````
-As a user,
-So that I can get a wordCount,
-I want to supply a text file to the application.
-
-As a user,
-So that I can analyse this text file with my new shiny wordCount app,
-I want to see a list of words in this file. - I don't care where I see these.
+````
+MVP User Story
 
 As a user,
-So that I can analyse this text file with my new shiny wordCount app,
-I want to see the number of times these words appear. - at the moment I am totally unfussy by what this looks like.
+So that I can see the wordCounterApp works,
+I want the example book to be preloaded.
 
 As a user,
-So that I can satisfy my prime number fascination while using my new wordCount app,
-I want to see if the number of times these words appear is prime.
+So that I can see the wordCounterApp works,
+I want to see all the words in the example book which are the same, I want all words to be standardised, ie no capitalisation or punctuation.
 
 As a user,
-So my eyes don't hurt when using the WordCounter App,
-I want the output of all of WordCount's outstanding functionality, to be more visually appealing.
-`````
+So that I can use the wordCounterApp works,
+I want to see all the words and their frequency in the supplied text File.
+
+As a user,
+So that I can use the wordCounterApp works,
+I want to see all the words and their frequency in the supplied text File.
+
+As a user who is a big prime numbers fan,
+So that I can use the wordCounterApp works,
+I want to see all the words, their frequency and if this number is prime or not in the supplied text File.
+````
+
+MVP+
+
+- Remove Roman numerals and numbers from the text. This would have to be done before the Regex expression for the removal of punctuation then capitalisation.
+
+- So that a user can see the frequency of these words in a way which allows them to get a better understanding of which words are the most common etc, then sorting the words so they are grouped and appear in terms of their frequency count. This would involve in some way an array as at the moment the words are only in a hash / object , which is un-ordered.
+
+MVP ++
+
+- User can input the file they want the word count from.
+I would input this using the node readline module. This would prompt the user for a file name. Then this file name would be passed to the fs.readFile functionality which would read it then pass the contents on to the run application functionality. For simplicity I would still keep this in the index.js file.
+
+MVP +++
+
+- Add a user interface in the browser. This would render a html page which contained a form for the user to select a file. Then the word count results for this page would be displayed. This would make viewing larger files much easier.
+
+
+## Reflections
+
+#### Level of abstraction
+
+I tried to keep this as small as possible. I split it into two modules:
+
+ - One which was responsible for 'cleaning' the input text; removing the punctuation, capitalisation, whitespace and validating the file was indeed text.
+ - Another which was responsible for splitting and counting the words then deciding if this frequency value was prime or not.
+
+ I toyed with removing the prime calculator to it's own module but since it was only one function which needed to act on the words which were created in splitAndCount module, I decided to not.
+
+ While writing my first set of tests for the split-and-count-words module I thought that I may have even abstracted too much. This is because I realised the input to this class relayed on the cleaning input text module have done it's job correctly. If it had not, then the text would contain whitespace and not count certain punctuated words as the same as their non-punctuated versions. Splitting them also meant slightly more code which doesn't fit with my agile intentions.
+
+ I decided to keep it as is because the two modules still did two separate jobs and the splitAndCountWords module did not relay too heavily on the cleanInputText one.
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## The Information Story - How I plan / design the programme flow
@@ -130,44 +171,6 @@ From each word any punctuation or capitalisation is removed.
 
 
 
-## My approach
-
-MVP
-
-## Dependancies and trade-offs
-
-Describe the dependencies your code has. What trade-offs did you make when deciding what dependencies to use?
-
-### Level of abstraction chosen and why split the way it was
-
-
-## Why I chose node:
-
-because I thought it would be the simplest, quickest and easiest way to acheive the MVP which fully satisfied the spec. Making it a web application involves view and html set up which should be MVP +, once there is a working product in the console.
-
-
-
-
-Designed an MVP:
-
-Simple Application which is given a file already and counts the numbers.
-It outputs to the command line.
-
-After outputting the numbers and their word counts it then does this again, stating if the word count is prime or not.
-
-
-
-Next feature:
-
-It formats this and displays it in a html file which is rendered in the browser.
-
-
-
-### Testing
-
-Why did i chose mainly expect/ assert and why chai ..
-
-
 ## Controller / Opening the file.
 
 First I started by doing this asynchronously. This meant that the file opened and loaded before the wordCounter App functions could be ran on it's content. It therefore did not work.
@@ -177,9 +180,7 @@ I then decided to do this syncronously. While the node FS modules are something 
 This was my first attempt. This obviously didn't work because the variable fileContents could not be accessed outside of the function it is set in.
 
 
-## Where my thinking came from
 
-I designed the MVP as I did because I had recently done something in the command line. I wanted to get the simplistest working products
 
 ## Issues
 
@@ -194,20 +195,32 @@ syncronousity of fs.readfile
 
 ## Reflection
 
+Test Coverage:
 
-Issues with using Spy .. unsure of the encapsulation .. why it is going through files sometimes and not others.
+Why is test coverage is not 100%?:
 
-https://stackoverflow.com/questions/11552991/cleaning-up-sinon-stubs-easily
+The test coverage states that not all the lines of the 'isPrimeCalculator' functionality in the splitAndCountWords module, are tested.
+I have tested that this method behaves as predicted with a number of different scenarios and edge cases. So i feel it is adequately tested.
+
+The main issue with test coverage is the missing feature test which would test the functionality of the whole app - the index.js file.
+This is missing because I had issues with creating multiple spys for 'console.log'. I had to clean up the sinon spys after I had created them even if they were made in a different describe function (for a different module). My issues with understanding how to do this effectively are, I think, to do with my lack of understanding of encapsulation.
+I was also not entirely sure if this feature test was needed because all the index file is doing is calling other modules.
+
+
+However it was useful for revealing some naming improvements for the two functions which called all the other functions within their module.
+
+
+
+
+
+
+
 
 
 
 
 
 At first my tests were not thorough enough. For the functionality which removed all punctuation and whitespace, I had not tested it against every type of character. When I added another test to include all characters it revealed the method (the regex expression within it) was lacking.
-
-While writing the first set of tests for the split-and-count-words module I became unsure about the level of abstarction I had designed.
-- When giving this module sample input I had to make sure the sample input contained no capitals, punctuation or whiteshape. This functionality should be done by the clean-input-text module which should be ran before it, however if there was an issue in they way the classes were called in main (as it may not be obvious that you have to 'clean' the input text before splitting and counting it) then the programme wouldn't deliever to the spec. As punctuation and capitalised words would be counted as different words.
-- this made me think maybe since the split-and-count-words functionality / module and the clean-input-text both relay on each other to deliver the relatively simple MVP with all functionality they could have been within one module. This would also reduce the amount of code having to be written,.. for example at the bottom of each of these 2 modules I write a function which calls the other functions in that module .. this could just be one function if they were together. Also there would be less code in the tests and I could be more thoroughly convinced all the functions were working together as intended .. because ...
 
 
 Commit history:
@@ -219,8 +232,8 @@ Chosen testing framwork:
 
 Feature test / Testing Main:
 
-Attempted to do a feature test which did the same as main did. However I wasn't sure this was necissary as all main does is call the other modules plus the node module fs.
-However it was useful for revealing some naming improvements for the two functions which called all the other functions within their module.
+
+
 
 Split-And-Count-Words Testing:
 
@@ -253,26 +266,27 @@ didn't want to wrap it in the function because of MVP ++.
 
 
 
-MVP+
 
-Remove Roman numerals and numbers from the text.
-Sort the words. So they are displayed in order of frequency, from most frequent to least.
+#### Why I chose the testing frameworks I did:
 
-MVP ++
-
-User is prompted to input the file by the comandline.So the word counter can be used for other files. I would do this using the real line module in node. I would console.log a prompt for the user to add the file name. This would then go into a function to read a file - fs module would be used. It could be further improved with the fs open file functionality which would allow the user to open a file on their local desktop and then this could be read.
-
+Used Chai with Mocha. I chose this over Jasmine for two reasons:
+1. Jasmine needs the browser and a spec runner file to function when I have used it in the past. Since I chose to make a commandline application / simple node application I did not want to use a testing framework which required the browser if my application itself did not.
+2. Chai allows more extensive testing, there are multiple things you can do with it which I am not sure about how to do with jasmine / if you can.. such as also asserting the length of an array.
 
 
 ### Resources
 
-testing:
+Testing:
 
 https://github.com/stephengeller/prime-numbers-tech-test/tree/master/src
 
 https://www.sitepoint.com/unit-test-javascript-mocha-chai/
 
 http://chaijs.com/guide/styles/#expect
+
+https://stackoverflow.com/questions/11552991/cleaning-up-sinon-stubs-easily
+
+
 
 Node's FS file system:
 
@@ -285,79 +299,3 @@ https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
 DisplayWords functionality in splitAndCountWords module:
 
 http://clubmate.fi/javascript-manipulating-objects-with-object-keys/
-
-
-Submission checklist
-
-Don't submit a tech test without running through these questions first.
-
-If any of the questions are unclear, take a look at out our guide for improving your code
-
- Is your code properly tested?
-
- Does your repository have a good README?
-
- Re-read the original task and check you've fulfilled all the requirements.
-
- Is your code formatted idiomatically?
-
-Employer quote: "Code was...untidy."
- Does your code look correctly formatted on GitHub as well as on your computer?
-
- Have you taken as much logic as possible out of your controllers into models/libraries?
-
- Have you taken logic out of your views?
-
- Does your code follow the Single Responsibility Principle? Ask each class, spec and method/function what it does, if the reply involves the word "and" you probably need to refactor.
-
- Are the units well encapsulated?
-
- Have you kept your methods/classes as small as possible?
-
- Have you run your code through a linter?
-
- Do all your names make sense? Can someone else understand what's going on without you having to explain it to them? Do your names use the language of the problem domain?
-
- Is any of your code doing anything unusual/suprising?
-
- Have you removed all comments except those that are absolutely necessary?
-
-Testing checklist
-
-Careers team quote: [One of] the big 3 things we hear from employers [is] write tests."
- Is all your code tested (especially unit tests but also feature tests where appropriate)?
-
- Are your tests passing?
-
- Do you have high test coverage?
-
- Have you tested unhappy paths and edge cases?
-
- Do your unit tests mock their collaborators?
-
- Do you always test for behaviour, rather than state?
-
- Do your specs read well when you run them?
-
-README checklist
-
-Careers team quote: "[One of] the big 3 things we hear from employers [is] write a good README."
-Employer quote: "The ReadMes are quite poor...so I had to go through their code to see what they made."
- Describe how you approached designing your solution to the problem.
-
- Describe how you structured your code. Why did you do it this way?
-
- Describe how to install and run your code and tests.
-
- Describe the dependencies your code has. What trade-offs did you make when deciding what dependencies to use?
-
- If you've deployed the app, include a link to it.
-
- Include screenshots of your running app.
-
- Try very hard to complete all the tasks in the tech test. If you run out of time, outline how you would have approached the sections you didn't get to.
-
-Employer quote: "We did say it's OK not to complete all parts if you run out of time, but I would have expected some attempt to outline their approach/thoughts instead to show what they can do."
- Describe the extensions you would add if you had more time.
-
- Spelling and grammar.

@@ -179,18 +179,18 @@ Splitting them also meant slightly more code which doesn't fit with my agile int
 
 #### Understanding of scope
 
-I managed to gain understanding in javascript scopes, for variables. But this did reveal that I still don't fully understand it and need further work.
+I managed to gain understanding in javascript scopes. But this did reveal that I still don't fully understand it and need further work.
 
 Wins:
-- Using the isPrimeCalculator functionality within the displayWords function. At first I used Object.key to try to access the key's in the hash, when I looped within this it changed the scope (i think) and stopped me from being able to access the isPrimeCalculator function. I solved this problem but would like to understand more.
+- Using the isPrimeCalculator functionality within the displayWords function. At first I used Object.key to try to access the key's in the hash. When I looped within this it changed the scope (i think) and stopped me from being able to access the isPrimeCalculator function. I solved this problem but would like to understand more.
 
 
-- Managed to use console.log spy multiple times by resetting the spy for it I had created each time with the afterEach functionality. This meant i could reset it and use it again in further tests.
+- Managed to use console.log spy multiple times by resetting/ destroying the spy I had created each time with the afterEach functionality. This meant I could  use it again in further tests.
 
 
-Still to solved/ working progress:
+Still to solve/ working progress:
 
-- Not sure where to declare the text file const, right now it is done outside the scope of any functions and is just part of calling the application to work. If the user was to select a file this would need to be put inside a module/ function. I would like to understand more about where would be best to declare this const.
+- Not sure where to declare the text file const, right now it is done outside the scope of any functions. If the user was given the option to select a file (MVP ++) this would need to be put inside a module/ function. I would like to understand more about where would be best to declare this const.
 
 - I need to further understand the 'garbage collection' / how to clean up these spys effectively so I could have set another spy and done a feature test on the index.js file.
 
@@ -200,12 +200,14 @@ Still to solved/ working progress:
 Why is test coverage is not 100%?:
 
 The test coverage states that not all the lines of the 'isPrimeCalculator' functionality in the splitAndCountWords module, are tested.
-I have tested that this method behaves as predicted with a number of different scenarios and edge cases. So i feel it is adequately tested.
+I have tested that this method behaves as predicted with a number of different scenarios and edge cases which I feel makes up for this lack in coverage.
 
 The main issue with test coverage is the missing feature test which would test the functionality of the whole app - the index.js file.
-This is missing because I had issues with creating multiple spys for 'console.log'. I had to clean up the sinon spys after I had created them even if they were made in a different describe function (for a different module). My issues with understanding how to do this effectively are, I think, to do with my lack of understanding of encapsulation.
-I was also not entirely sure if this feature test was needed because all the index file is doing is calling other modules.
 
+This is missing because I had issues with creating multiple spys for 'console.log'. I had to clean up the sinon spys after I had created them, even if they were made in a different describe function (for a different module).
+My issues with understanding how to do this effectively are, I think, to do with my lack of understanding of encapsulation.
+
+I was also not entirely sure if this feature test was needed because all the index file is doing is calling other modules.
 
 
 #### Synchronous loading of the file

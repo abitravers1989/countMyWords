@@ -121,7 +121,8 @@ MVP+
 
 - Remove Roman numerals and numbers from the text. This would have to be done before the Regex expression for the removal of punctuation then capitalisation.
 
-- So that a user can see the frequency of these words in a way which allows them to get a better understanding of which words are the most common etc, then sorting the words so they are grouped and appear in terms of their frequency count. This would involve in some way an array as at the moment the words are only in a hash / object , which is un-ordered.
+- Sorting the words in terms of their frequency. This would allow the user to more easily see which words are most common etc. My first approach to this would involve using an array as at the moment the words are stored in a hash/ object, which is un-ordered.
+
 
 MVP ++
 

@@ -7,8 +7,12 @@
 
 A simple command-line node application.
 
-It takes the example text file (saved as 'sampleTextFile' in the public folder of this directory).
-It outputs, to the console, the words which appear in that file, their frequency and if that number is prime or not.
+It takes the example text file (saved in the public folder of this directory).
+
+It outputs, to the console;
+- the words which appear in that file,
+- their frequency,
+- if that number is prime or not.
 
 ## Getting started
 

@@ -152,7 +152,7 @@ I tried to keep this as small as possible. I split it into two modules:
  I decided to keep it as is because the two modules still did two separate jobs and the splitAndCountWords module did not relay too heavily on the cleanInputText one.
 
 
-### Understanding of scope
+#### Understanding of scope
 
 I managed to gain understanding in javascript scopes, for variables. But this did reveal that I still don't fully understand it and need further work.
 
@@ -170,7 +170,7 @@ Still to solved/ working progress:
 - I need to further understand the 'garbage collection' / how to clean up these spys effectively so I could have set another spy and done a feature test on the index.js file.
 
 
-### Test Coverage:
+#### Test Coverage:
 
 Why is test coverage is not 100%?:
 
@@ -183,14 +183,14 @@ I was also not entirely sure if this feature test was needed because all the ind
 
 
 
-## Syncronous loading of the file
+#### Syncronous loading of the file
 
 Despite the fact this may slow down the programme I decided to laod the text file syncronously. This is because I need the content to be loaded before preforming the other functions on it. The whole programme depends on the file being loaded to work.
 
 I have some experience of using the fs node module from my final project at makers, so this made it easier.
 
 
-### Commit history:
+#### Commit history:
 
 I committed when I wrote the tests, so looking back through the history will reveal a code-base which is failing all the tests. Working professionally I would only commit when the code was passing the tests, however in this instance, I wanted to show that I was using TDD and red-green-refactor approach.
 

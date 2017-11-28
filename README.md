@@ -127,11 +127,16 @@ MVP+
 MVP ++
 
 - User can input the file they want the word count from.
-I would input this using the node readline module. This would prompt the user for a file name. Then this file name would be passed to the fs.readFile functionality which would read it then pass the contents on to the run application functionality. For simplicity I would still keep this in the index.js file.
+
+I would input this using the node readline module. This would prompt the user for a file name. Then this file name would be passed to the fs.readFile functionality which would read it then pass the contents on to the run application functionality.
+
+For simplicity I would still keep this in the index.js file. But if it was more complex consider abstracting it to a separate module.
 
 MVP +++
 
-- Add a user interface in the browser. This would render a html page which contained a form for the user to select a file. Then the word count results for this page would be displayed. This would make viewing larger files much easier.
+- Add a user interface in the browser.
+This would render a html page which contained a form for the user to select a file, then the word count results would be displayed.
+This would make viewing larger files much easier and the results could further be displayed in more user-friendly ways.
 
 ## The information story
 

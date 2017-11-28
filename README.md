@@ -52,7 +52,7 @@ If you are not still there navigate back to the project folder in your terminal.
 ````
 $npm test
 ````
-![Running the tests ](https://github.com/abitravers1989/countMyWords/blob/master/public/running-tests.mp4)
+![Running the tests](https://github.com/abitravers1989/countMyWords/blob/master/public/running-tests.mp4)
 
 
 #### Test Coverage:

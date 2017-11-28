@@ -122,7 +122,7 @@ MVP +++
 
 - Add a user interface in the browser. This would render a html page which contained a form for the user to select a file. Then the word count results for this page would be displayed. This would make viewing larger files much easier.
 
-## The Information Story - How I plan / design the programme flow
+## The information story
 
 A text file is provided to the index.js file , the fsReadfile functionality reads the contents of this file.
 This contents is then passed to the application which is ran. The application:
@@ -183,9 +183,9 @@ I was also not entirely sure if this feature test was needed because all the ind
 
 
 
-#### Syncronous loading of the file
+#### Synchronous loading of the file
 
-Despite the fact this may slow down the programme I decided to laod the text file syncronously. This is because I need the content to be loaded before preforming the other functions on it. The whole programme depends on the file being loaded to work.
+Despite the fact this may slow down the programme I decided to load the text file synchronously. This is because I need the content to be loaded before preforming the other functions on it. The whole programme depends on the file being loaded to work.
 
 I have some experience of using the fs node module from my final project at makers, so this made it easier.
 

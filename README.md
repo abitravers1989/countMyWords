@@ -140,8 +140,10 @@ This would make viewing larger files much easier and the results could further b
 
 ## The information story
 
-A text file is provided to the index.js file , the fsReadfile functionality reads the contents of this file.
-This contents is then passed to the application which is ran. The application:
+A text file is provided to the index.js file, the fsReadfile functionality reads the contents of this file.
+This contents is then passed to the application.
+
+Running the application does the following:
 
 1st Checks the input is valid.
 2nd Removes all capitalisation / punctuation and whitespace.

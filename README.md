@@ -1,6 +1,6 @@
 ## Word Counter Application
 
-![Using the application](https://github.com/abitravers1989/countMyWords/blob/master/public/using-application.mp4)
+![Using the application](https://github.com/abitravers1989/countMyWords/blob/master/public/running-programme.mp4)
 
 ### The what:
 

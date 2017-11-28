@@ -167,9 +167,12 @@ I tried to keep this as small as possible. I split it into two modules:
  I decided not to because;
  - it was only one function,
  - it needed to act on the words which were created in splitAndCount module,
- - keeping it in the same module as the other functions meant the display function could be kept much less complex and didn't need another module to be injected into it. and was used by the display functionality, I decided to not.
+ - keeping it in the same module as the other functions meant the display function could be kept much less complex and didn't need another module to be injected into it.
 
- While writing my first set of tests for the split-and-count-words module I thought that I may have even abstracted too much. This is because I realised the input to this class relayed on the cleaning input text module have done it's job correctly. If it had not, then the text would contain whitespace and not count certain punctuated words as the same as their non-punctuated versions. Splitting them also meant slightly more code which doesn't fit with my agile intentions.
+
+While writing my first set of tests for the split-and-count-words module I thought that I may have even abstracted too much.
+I realised the input to this module relayed on the cleaning input text module have done it's job correctly. If it had not, then the text would contain whitespace and not count certain punctuated words as the same as their non-punctuated versions.
+Splitting them also meant slightly more code which doesn't fit with my agile intentions.
 
  I decided to keep it as is because the two modules still did two separate jobs and the splitAndCountWords module did not relay too heavily on the cleanInputText one.
 

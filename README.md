@@ -219,14 +219,13 @@ I have some experience of using the fs node module from my final project at make
 
 #### Commit history:
 
-I committed when I wrote the tests, so looking back through the history will reveal a code-base which is failing all the tests. Working professionally I would only commit when the code was passing the tests, however in this instance, I wanted to show that I was using TDD and red-green-refactor approach.
+Looking back through the commit history will reveal a code-base which is failing all the tests at some points. This is because I wanted the commits to reflect my working process, red-green-refactor, so I commit when I wrote the tests before I wrote the code.
+ Working professionally I would only commit when the code was passing the tests.
 
 
 #### Why I chose the testing frameworks I did:
 
-Used Chai with Mocha. I chose this over Jasmine for two reasons:
-1. Jasmine needs the browser and a spec runner file to function when I have used it in the past. Since I chose to make a commandline application / simple node application I did not want to use a testing framework which required the browser if my application itself did not.
-2. Chai allows more extensive testing, there are multiple things you can do with it which I am not sure about how to do with jasmine / if you can.. such as also asserting the length of an array.
+I chose to test with Chai with Mocha. I chose this over Jasmine because I felt, Chai allows more extensive testing. There are multiple things you can do with it which I am not sure how to do with Jasmine/ if you even can as effectively (such as also asserting the length of an array).
 
 
 ### Resources

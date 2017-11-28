@@ -1,6 +1,6 @@
 ## Word Counter Application
 
-![Using the application](https://github.com/abitravers1989/countMyWords/blob/master/public/run-application-smaller.gif)
+![Using the application](https://github.com/abitravers1989/countMyWords/blob/master/public/running-application.gif)
 
 
 ### The what:
@@ -59,7 +59,7 @@ Then type:
 ````
 $npm test
 ````
-![Running the tests](https://github.com/abitravers1989/countMyWords/blob/master/public/run-tests.gif)
+![Running the tests](https://github.com/abitravers1989/countMyWords/blob/master/public/running-tests.gif)
 
 
 #### Test Coverage:

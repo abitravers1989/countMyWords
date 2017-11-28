@@ -39,7 +39,8 @@ $ $npm install
 
 ## How to use it
 
-If you are not still there navigate back to the project folder in your terminal. Then type:
+If you are not still there, navigate back to the project folder in your terminal.
+ Then type:
 
 `````
 $ npm start
@@ -52,7 +53,8 @@ $ node index.js
 
 ## Running the tests
 
-If you are not still there navigate back to the project folder in your terminal. Then type:
+If you are not still there, navigate back to the project folder in your terminal.
+Then type:
 
 ````
 $npm test
@@ -81,9 +83,10 @@ Linitng (ensuring code is formatted correctly): ESLint
 ## My approach
 
 
-I tried to use lean/agile methodology by creating the minimum / most simple application which would still satisfy the given criteria.
+I tried to use lean/agile methodology by creating the minimum / most simple application which would satisfy the given criteria.
 
-For this reason, I chose to make a commandline node application. I felt this involved less code than a browser application(as I didn't have to create the views).
+For this reason, I chose to make a commandline node application.
+I felt this involved less code than a browser application(as I didn't have to create the views).
 
 
 #### Programme design approach

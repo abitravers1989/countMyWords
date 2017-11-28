@@ -2,6 +2,8 @@
 
 ![Using the application](https://github.com/abitravers1989/countMyWords/blob/master/public/running-tests-small.mp4)
 
+![Using](./public/running-tests-small.mp4)
+
 ### The what:
 
 A simple command-line node application.

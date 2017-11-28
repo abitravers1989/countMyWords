@@ -161,9 +161,13 @@ Running the application does the following:
 I tried to keep this as small as possible. I split it into two modules:
 
  - One which was responsible for 'cleaning' the input text; removing the punctuation, capitalisation, whitespace and validating the file was indeed text.
- - Another which was responsible for splitting and counting the words then deciding if this frequency value was prime or not.
+ - Another which was responsible for splitting and counting the words, then deciding if the number which represented the frequency was prime or not.
 
- I toyed with removing the prime calculator to it's own module but since it was only one function which needed to act on the words which were created in splitAndCount module, I decided to not.
+ I toyed with removing the prime calculator to it's own module.
+ I decided not to because;
+ - it was only one function,
+ - it needed to act on the words which were created in splitAndCount module,
+ - keeping it in the same module as the other functions meant the display function could be kept much less complex and didn't need another module to be injected into it. and was used by the display functionality, I decided to not.
 
  While writing my first set of tests for the split-and-count-words module I thought that I may have even abstracted too much. This is because I realised the input to this class relayed on the cleaning input text module have done it's job correctly. If it had not, then the text would contain whitespace and not count certain punctuated words as the same as their non-punctuated versions. Splitting them also meant slightly more code which doesn't fit with my agile intentions.
 

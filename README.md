@@ -64,16 +64,22 @@ $npm test
 ## Technologies
 
 Code language: Javascript
+
 Application framework?: Node.js
-Test: Chai and mocha   http://chaijs.com/guide/styles/#expect
+
+Test: Chai and mocha  
+
 Test Coverage: ![Istanbul ](https://istanbul.js.org/)
+
 Linitng (ensuring code is formatted correctly): ESLint
 
 
 ## My approach
 
 
-I tried to use lean/agile methodology by creating the minimum / most simple application which would still satisfy the given criteria. This is why I chose to make a commandline node application which involved less code than a browser application(as didn't have to create the views).
+I tried to use lean/agile methodology by creating the minimum / most simple application which would still satisfy the given criteria.
+
+For this reason, I chose to make a commandline node application. I felt this involved less code than a browser application(as I didn't have to create the views).
 
 
 #### Programme design approach
@@ -82,30 +88,26 @@ MVP
 
 - Commandline node app.
 - The textFile is pre-supplied and hard-coded into the programme.
-- On running the programme the words, their frequency and if this number is prime or not, appears in the terminal.
+- On running the programme; the words, their frequency and if this number is prime or not, appears in the terminal.
 
 ````
 MVP User Story
 
 As a user,
-So that I can see the wordCounterApp works,
+So that I can see that the wordCounterApp works,
 I want the example book to be preloaded.
 
 As a user,
-So that I can see the wordCounterApp works,
-I want to see all the words in the example book which are the same, I want all words to be standardised, ie no capitalisation or punctuation.
+So that I can see that the wordCounterApp works,
+I want to see all the words in the example book, I want all words to be standardised, ie no capitalisation or punctuation.
 
 As a user,
-So that I can use the wordCounterApp works,
-I want to see all the words and their frequency in the supplied text File.
-
-As a user,
-So that I can use the wordCounterApp works,
-I want to see all the words and their frequency in the supplied text File.
+So that I can use the wordCounterApp,
+I want to see all the words and their frequency in the supplied text File(book).
 
 As a user who is a big prime numbers fan,
-So that I can use the wordCounterApp works,
-I want to see all the words, their frequency and if this number is prime or not in the supplied text File.
+So that I can use the wordCounterApp,
+I want to see all the words, their frequency and if this number is prime or not.
 ````
 
 MVP+

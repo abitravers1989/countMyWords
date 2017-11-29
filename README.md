@@ -194,6 +194,12 @@ Still to solve/ working progress:
 
 - I need to further understand the 'garbage collection' / how to clean up these spys effectively so I could have set another spy and done a feature test on the index.js file.
 
+Scope and closures:
+http://ryanmorr.com/understanding-scope-and-context-in-javascript/
+The const (and let) variables are confined to the scope of the block they are defined in.
+The fs.readfile const I have declare is outside of a block so I think will be accessible through the whole runtime of the programme.
+The spy seems to be defined within the module describe block .. therefore I am not sure still why it is persisting into other tests' describe blocks, or if this is even the problem at all.
+
 
 #### Test Coverage:
 
